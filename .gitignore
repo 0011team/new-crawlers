@@ -1,0 +1,14 @@
+*.pyc
+*.ipynb
+*/settings.py
+.ipynb_checkpoints/
+.DS_Store
+chromedriver
+
+bills/html/
+bills/data/
+bills/na-bills-*.csv
+bills/new_bills
+
+# didn't prepare.
+bills/specific

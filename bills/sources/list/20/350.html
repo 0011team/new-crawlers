@@ -1,0 +1,3577 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ --><head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>의안정보시스템</title>
+<!-- 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" /> -->
+	<link rel="stylesheet" type="text/css" href="/bill/css/main.css"> 
+	<link rel="stylesheet" type="text/css" href="/bill/css/sub.css"> 
+	
+	
+	<script src="/bill/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/validation.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/printThis.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/bill/js/paging.js" type="text/javascript" charset="utf-8"></script>
+	
+
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+
+<form name="commForm" method="post" action="/bill/BonConfFinishBill.do">
+	<input type="hidden" name="billId" value="">
+	<input type="hidden" name="srchBillResultCd" value="">
+	<input type="hidden" name="sessionCd" value="">
+	<input type="hidden" name="currentsCd" value="">
+	<input type="hidden" name="currentsDt" value="">
+	<input type="hidden" name="billNo" value="">
+	<input type="hidden" name="billName" value="">
+	<input type="hidden" name="simsaBonmun" value="">
+	<input type="hidden" name="ageFrom" value="20">
+	<input type="hidden" name="ageTo" value="20">
+	<input type="hidden" name="age" value="">
+	<input type="hidden" name="dateFrom" value="">
+	<input type="hidden" name="dateTo" value="">
+	<input type="hidden" name="procFrom" value="">
+	<input type="hidden" name="procTo" value="">
+	<input type="hidden" name="dispFrom" value="">
+	<input type="hidden" name="dispTo" value="">
+	<input type="hidden" name="proposeFrom" value="">
+	<input type="hidden" name="proposeTo" value="">
+	<input type="hidden" name="submitFrom" value="">
+	<input type="hidden" name="submitTo" value="">
+	<input type="hidden" name="billNoFrom" value="">
+	<input type="hidden" name="billNoTo" value="">
+	<input type="hidden" name="billKind" value="전체">
+	<input type="hidden" name="billKind2" value="">
+	<input type="hidden" name="billKindExclude" value="">
+	<input type="hidden" name="chargeCommittee" value="">
+	<input type="hidden" name="chargeCommitteeName" value="">
+	<input type="hidden" name="proposerKind" value="전체">
+	<input type="hidden" name="proposer" value="">
+	<input type="hidden" name="hjNm" value="">
+	<input type="hidden" name="statsType" value="">
+	<input type="hidden" name="proposeGubn" value="전체">
+	<input type="hidden" name="generalResult" value="">
+	<input type="hidden" name="generalResultType" value="">			
+	<input type="hidden" name="committeeResult" value="">
+	<input type="hidden" name="periodFrom" value="">
+	<input type="hidden" name="periodTo" value="">
+	<input type="hidden" name="budgetYn" value="">
+	<input type="hidden" name="billGbnAmendment" value="">			
+	<input type="hidden" name="orderColumn" value="Propose_Dt">
+	<input type="hidden" name="orderType" value="DESC">
+	<input type="hidden" name="lastQuery" value="">
+	<input type="hidden" name="strPage" value="350">
+	<input type="hidden" name="pageSize" value="50">
+	<input type="hidden" name="maxPage" value="10">
+	<input type="hidden" name="billparam" value="">
+	<input type="hidden" name="allCount" value="24721">
+	<input type="hidden" name="resultCount" value="50">
+	<input type="hidden" name="mooring" value="N">
+	<input type="hidden" name="statsKind" value="">
+	<input type="hidden" name="ageCheck" value="">
+	<input type="hidden" name="tabMenuType" value="billSimpleSearch">
+</form>
+
+		<div class="headerWrap">
+			<div class="top inner">
+				<h1><a href="/bill"><img src="/bill/images/common/main_logo.png" alt="의안정보시스템"></a></h1>
+				<ul class="siteMenu">
+					<li><a href="/bill">HOME</a> |</li>
+					<li><a href="http://likms.assembly.go.kr/nsrch" target="_blank">입법정보 통합검색</a></li>
+				</ul>
+			</div>
+			<div class="gnb">
+				<div class="inner">
+				<ul class="gnbList">
+					<li class="gnbL1">
+						<a href="/bill/info/Summary.do?tabMenuType=billInfo_1" class="depth1">의안개요</a>
+						<ul class="depth2">
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_1">의안의 의의</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_2">의안의 종류</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_3">의안의 일반적 심의절차</a></li>
+							<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_4">용어해설</a></li>
+						</ul>
+					</li>
+					<li class="gnbL2">
+						<a href="/bill/BillSearchSimple.do" class="depth1">의안검색</a>
+						<ul class="depth2">
+							<li><a href="/bill/BillSearchSimple.do">간편검색</a></li>
+							<li>
+								<a href="/bill/BillSearchDetail.do">상세검색</a>
+								<ul class="depth3">
+									<li><a href="/bill/BillSearchDetail.do">의안상세</a></li>
+									<li><a href="/bill/BillSearchSimsa.do">심사보고서</a></li>
+									<li><a href="/bill/BillSearchLaw.do">발의법률안</a></li>
+									<li><a href="/bill/BillSearchProposal.do">제안이유 및 주요내용</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+							<!--2019-01-09 최근 본회의처리 법률안 추가요청 start-->
+							<!--2019-01-09 스타일 gnbL3->gnbL1 로 변경-->
+					<li class="gnbL3">
+						<a href="/bill/FinishBill.do" class="depth1">의안현황</a>
+						<ul class="depth2">
+							<!--2019-01-09 최근 본회의처리 법률안 추가요청 end-->
+							<li>
+								<a href="/bill/FinishBill.do">처리의안</a>
+								<ul class="depth3">
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=가결">가결</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=대안반영">대안반영</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=부결">부결</a></li>
+									<li><a href="/bill/FinishBill.do?srchBillResultCd=기타">기타</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="/bill/MooringBill.do">계류의안</a>
+							</li>
+							<li>
+								<a href="/bill/SuggestBill.do">위원회안(대안)</a>
+							</li>
+							<li>
+								<a href="/bill/BeforePropose.do">본회의부의안건</a>
+							</li>
+							<li>
+								<a href="/bill/PassedBill.do">최근 본회의 처리법률안</a>
+							</li>
+						</ul>
+					</li>
+					<li class="gnbL4">
+						<a href="/bill/stat/statFinishBillSearch.do" class="depth1">의안통계</a>
+						<ul class="depth2">
+							<li>
+								<a href="/bill/stat/statFinishBillSearch.do">처리의안통계</a>
+							</li>
+							<li>
+								<a href="/bill/stat/statMooringBill.do">계류의안통계</a>
+							</li>
+						</ul>
+					</li>
+					<li class="gnbL5">
+						<a href="/bill/ReportList.do" class="depth1">연차보고서</a>
+						<div class="depth2">
+						</div>
+					</li>
+					<li class="gnbL6">
+						<a href="/bill/PetitionFinish.do" class="depth1">청원</a>
+						<ul class="depth2">
+							<li>
+								<a href="/bill/PetitionFinish.do">청원현황</a>
+							</li>
+							<li>
+								<a href="/bill/PetitionSearch.do">청원검색</a>
+							</li>
+							<li>
+								<a href="/bill/PetitionStat.do">청원통계</a>
+							</li>
+						</ul>
+					</li>
+					
+				</ul>
+				<div class="allMenu"><a href="#"><img src="/bill/images/common/allMenu.png" alt="전체메뉴보기"></a></div>
+				</div>
+				<div class="allmenuOpen layerpop">
+					<div class="layti">의안정보시스템 전체메뉴</div>
+					<div class="menuList">
+						<ul class="menuListA">
+							<li style="width:220px;">
+								<a href="/bill/info/Summary.do?tabMenuType=billInfo_1" class="depth01">의안개요</a>
+								<ul class="depth02">
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_1">의안의 의의</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_2">의안의 종류</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_3">의안의 일반적 심의절차</a></li>
+									<li><a href="/bill/info/Summary.do?tabMenuType=billInfo_4">용어해설</a></li>
+								</ul>
+							</li>
+							<li style="width:207px;">
+								<a href="/bill/BillSearchSimple.do" class="depth01">의안검색</a>
+								<ul class="depth02">
+									<li><a href="/bill/BillSearchSimple.do">간편검색</a></li>
+									<li>
+										<a href="/bill/BillSearchDetail.do">상세검색</a>
+										<ul class="depth03">
+											<li><a href="/bill/BillSearchDetail.do">의안상세</a></li>
+											<li><a href="/bill/BillSearchSimsa.do">심사보고서</a></li>
+											<li><a href="/bill/BillSearchLaw.do">발의법률안</a></li>
+											<li><a href="/bill/BillSearchProposal.do">제안이유 및 주요내용</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li style="width:190px;">
+								<a href="/bill/FinishBill.do" class="depth01">의안현황</a>
+								<ul class="depth02">
+									<li>
+										<a href="/bill/FinishBill.do">처리의안</a>
+										<ul class="depth03">
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=가결">가결</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=대안반영">대안반영</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=부결">부결</a></li>
+											<li><a href="/bill/FinishBill.do?srchBillResultCd=기타">기타</a></li>
+										</ul>
+									</li>
+										<li><a href="/bill/MooringBill.do">계류의안</a></li>
+										<li><a href="/bill/BeforePropose.do">본회의부의안건</a></li>
+								</ul>
+							</li>
+							<li style="width:180px;">
+								<a href="/bill/stat/statFinishBillSearch.do" class="depth01">의안통계</a>
+								<ul class="depth02">
+									<li><a href="/bill/stat/statFinishBillSearch.do">처리의안통계</a></li>
+									<li><a href="/bill/stat/statMooringBill.do">계류의안통계</a></li>
+								</ul>
+							</li>
+							<li style="width:200px;">
+								<a href="/bill/ReportList.do" class="depth01">연차보고서</a>
+							</li>
+							<li style="width:160px;">
+								<a href="/bill/PetitionFinish.do" class="depth01">청원</a>
+								<ul class="depth02">
+									<li><a href="/bill/PetitionFinish.do">청원현황</a></li>
+									<li><a href="/bill/PetitionSearch.do">청원검색</a></li>
+									<li><a href="/bill/PetitionStat.do">청원통계</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menuListA">
+							<li style="width:230px;">
+								<a href="/bill/nafs/nafsList.do?tabMenuType=BudgLaw" class="depth01">예산정보</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgLaw">예산안현황</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgRef">참고정보</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=BudgDecsn">확정예산</a></li>
+								</ul>
+							</li>
+							<li style="width:250px;">
+								<a href="/bill/nafs/nafsList.do?tabMenuType=StlmtLaw" class="depth01">결산정보</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtLaw">결산현황</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtRef">참고정보</a></li>
+									<li><a href="/bill/nafs/nafsList.do?tabMenuType=StlmtSijung">시정요구및조치결과</a></li>
+								</ul>
+							</li>
+							<li style="width:235px;">
+								<a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_1" class="depth01">예산결산안내</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_1">예산</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_2">결산</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_3">기금</a></li>
+									<li><a href="/bill/nafs/info/FI_InfoR.do?tabMenuType=nafsInfo_4">임대형 민자사업(BTL)한도액안</a></li>
+								</ul>
+							</li>
+							<li style="width:210px;">
+								<a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1" class="depth01" target="_blank">용어사전</a>
+							</li>
+							<li style="width:230px;">
+								<a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1" class="depth01">관련법령</a>
+								<ul class="depth02">
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_1">예산회계관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_2">특별회계관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_3">기금관련법령</a></li>
+									<li><a href="/bill/nafs/Law/FI_LawR.do?tabMenuType=nafsLaw_4">조세및지방세관련법령</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="menuListB">
+							<li><a href="/bill/BonConfFinishBill.do">본회의처리의안</a></li>
+							<li><a href="/bill/billVoteResult.do">본회의표결정보</a></li>
+							<li><a href="/bill/LatestPassedBill.do">최근통과의안</a></li>
+							<li><a href="/bill/LatestReceiptBill.do">최근접수의안</a></li>
+						</ul>
+						<ul class="menuListC mt40">
+							<li><a href="http://likms.assembly.go.kr/nsrch" target="_blank">입법정보 통합검색</a></li>
+							<li><a href="/bill/notice/noticeList.do">공지사항</a></li>
+							<li><a href="http://committee.na.go.kr/portal/" target="_blank">위원회</a></li>
+							<li><a href="/bill/info/Persnalinfo.do?tabMenuType=persnalinfo">개인정보처리방침</a></li>
+							<li><a href="/bill/info/HelpDesk.do?tabMenuType=helpdesk_1">도움말</a></li>
+						</ul>
+					</div>
+
+					<button type="button" class="btnClose"><img src="/bill/images/icon/icon_close.png" alt="창닫기"></button>
+				</div>
+				
+				<div class="bg_depth"></div>
+				<div class="bg_dim"></div>
+				
+			</div>
+		</div>
+		
+	
+
+		<!-- 컨텐츠 -->
+		<div class="contentWrap">
+			<!-- LNB -->
+			
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+			
+	
+				
+	
+			
+	
+	
+			<div class="subLnb">
+				<h2 class="titLnb">의안검색</h2>
+				<ul class="list">
+					<li>
+						<a href="/bill/BillSearchSimple.do" class="on">간편검색</a>
+					</li>
+					<li>
+						<a href="/bill/BillSearchDetail.do">상세검색</a>
+					</li>
+				</ul>
+			</div>
+	
+			
+	
+	
+	
+	
+	
+	
+	
+
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+			
+			
+			
+			
+	
+			<!-- //LNB -->	
+			
+
+
+
+
+
+
+
+
+
+
+<!-- 
+	<script type="text/javascript">
+		var pageContextRootPath = "/bill";
+	</script>
+ -->
+
+
+
+
+
+
+
+<script type="text/javascript"> 
+    $(document).ready(function() {
+		SetPageView();
+	});
+    
+    
+    function DoSearch() {
+		var	hfm			= document.srchForm;
+		var	lastQry	= 	"";
+		var	innerSrchCheck		= document.all['innerSrchCheck'].checked;
+		var	srchBillName			= document.all['srchBillName'].value;
+	
+		if(innerSrchCheck) {
+			hfm.lastQuery.value		= lastQry;
+		} else {
+			hfm.lastQuery.value		= '';
+		}
+		if(document.readyState != "complete"){
+			alert("검색조회 중 입니다. 잠시만 기다려주세요.");
+			return;
+		}else{
+			hfm.billName.value		= srchBillName;
+			ResetPaging();
+			hfm.submit();	
+		}
+	}
+</script>
+
+<form name="srchForm" method="post" action="/bill/BillSearchResult.do">
+	<input type="hidden" name="billNo" value="">
+	<input type="hidden" name="billName" value="">
+	<input type="hidden" name="simsaBonmun" value="">
+	<input type="hidden" name="ageFrom" value="20">
+	<input type="hidden" name="ageTo" value="20">
+	<input type="hidden" name="age" value="">
+	<input type="hidden" name="dateFrom" value="">
+	<input type="hidden" name="dateTo" value="">
+	<input type="hidden" name="procFrom" value="">
+	<input type="hidden" name="procTo" value="">
+	<input type="hidden" name="dispFrom" value="">
+	<input type="hidden" name="dispTo" value="">
+	<input type="hidden" name="proposeFrom" value="">
+	<input type="hidden" name="proposeTo" value="">
+	<input type="hidden" name="submitFrom" value="">
+	<input type="hidden" name="submitTo" value="">
+	<input type="hidden" name="billNoFrom" value="">
+	<input type="hidden" name="billNoTo" value="">
+	<input type="hidden" name="billKind" value="전체">
+	<input type="hidden" name="billKind2" value="">
+	<input type="hidden" name="billKindExclude" value="">
+	<input type="hidden" name="chargeCommittee" value="">
+	<input type="hidden" name="chargeCommitteeName" value="">
+	<input type="hidden" name="proposerKind" value="전체">
+	<input type="hidden" name="proposer" value="">
+	<input type="hidden" name="hjNm" value="">
+	<input type="hidden" name="statsType" value="">
+	<input type="hidden" name="proposeGubn" value="전체">
+	<input type="hidden" name="generalResult" value="">
+	<input type="hidden" name="generalResultType" value="">			
+	<input type="hidden" name="committeeResult" value="">
+	<input type="hidden" name="periodFrom" value="">
+	<input type="hidden" name="periodTo" value="">
+	<input type="hidden" name="budgetYn" value="">
+	<input type="hidden" name="billGbnAmendment" value="">			
+	<input type="hidden" name="orderColumn" value="Propose_Dt">
+	<input type="hidden" name="orderType" value="DESC">
+	<input type="hidden" name="lastQuery" value="">
+	<input type="hidden" name="strPage" value="350">
+	<input type="hidden" name="pageSize" value="50">
+	<input type="hidden" name="maxPage" value="10">
+	<input type="hidden" name="billparam" value="">
+	<input type="hidden" name="allCount" value="24721">
+	<input type="hidden" name="resultCount" value="50">
+	<input type="hidden" name="mooring" value="N">
+	
+	
+	<input type="hidden" name="billNoYn" value="N">
+	
+	
+	<input type="hidden" name="statsKind" value="">
+	<input type="hidden" name="ageCheck" value="">
+	<input type="hidden" name="tabMenuType" value="billSimpleSearch">
+</form>
+
+
+			<div class="subContents">
+				<h3 class="titCont"><img src="/bill/images/icon/icon_mainti.png" alt="">검색결과 상세</h3>
+
+				<div class="contents">
+					<p class="textType01">
+						<span>
+							
+							
+								
+								
+							
+							총24,721건이 검색되었습니다.
+						</span>
+					</p>
+					<div class="boxType01 mt20">
+						<div class="search01">
+							<div>
+								<label class="bul01">의안명</label>
+
+								<div class="inputWord">
+									<input id="srchBillName" type="text" class="w330" title="검색할 키워드 입력" value="" onkeypress="if(event.keyCode == 13) DoSearch();">
+									<button type="button" class="btnSearch01" onclick="DoSearch();">검 색</button>
+								</div>
+								<label><input id="innerSrchCheck" type="checkbox">결과 내 재검색</label>
+							</div>
+						</div>
+					</div>
+					<div class="tableCol01">
+						<div class="tableInfo">
+							<p class="textType02">
+								<img src="/bill/images/icon/icon_gye.gif" alt="계"> 계류의안
+								&nbsp;&nbsp;
+								<img src="/bill/images/icon/icon_cheo.gif" alt="처"> 처리의안
+							</p>
+							<div class="tableInfoR">
+								<label>
+									<span class="bulG01">페이지당 결과 수</span>
+									<select id="pageSizeOption" class="basicsel w90" onchange="document.srchForm.pageSize.value=this.options[this.selectedIndex].value; DoSearch();">
+										
+										
+											<option value="10">10</option>
+										
+											<option value="20">20</option>
+										
+											<option value="50" selected="">50</option>
+										
+											<option value="100">100</option>
+										
+									</select>
+								</label>
+							</div>
+						</div>
+						<table summary="검색결과의 의안번호, 의안명, 제안자구분, 제안일자, 의결일자, 의결결과, 주요내용, 심사진행상태 정보">
+							<caption class="hidden">처리의안 검색결과</caption>
+							<colgroup>
+								<col style="width:70px"><col style="width:auto"><col style="width:70px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px"><col style="width:80px">
+							</colgroup>
+							
+							<thead>
+								<tr>
+									<th scope="col"><a href="javascript:titleSort('Bill_No');">의안번호</a></th>
+									<th scope="col"><a href="javascript:titleSort('Bill_Name');">의안명</a></th>
+									<th scope="col"><a href="javascript:titleSort('Proposer_Kind');"> 제안자구분</a></th>
+									<th scope="col"><a href="javascript:titleSort('Propose_Dt');"> 제안일자</a></th>
+									
+									
+										
+										
+											<th scope="col"><a href="javascript:titleSort('Proc_Dt');">의결일자</a></th>
+											<th scope="col"><a href="javascript:titleSort('General_Result');">의결결과</a></th>	
+										
+									
+						
+									
+									<!-- <th scope="col"><a href="javascript:titleSort('Summary_Status');">주요내용</a></th> -->
+									<th scope="col">주요내용</th>
+									<th scope="col"><a href="javascript:titleSort('Proc_Stage_Cd');">심사진행상태</a></th>
+																
+								</tr>
+							</thead>
+							<tbody>
+							
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007224</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_R1V7V0U6G0K7J1A0I0R6F3E7C5B8Q2', 'billSimpleSearch')" title="2017년도 무역보험기금운용계획변경안">
+										 
+										
+										2017년도 무역보험기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007223</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_W1M7S0V6W0O7J1M0P0X6R0U0L5L6D5', 'billSimpleSearch')" title="2017년도 소상공인시장진흥기금운용계획변경안">
+										 
+										
+										2017년도 소상공인시장진흥기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007222</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_H1Z7U0B6N0M7F1F0A0Z3D2Z3T6A5H3', 'billSimpleSearch')" title="2017년도 중소기업창업 및 진흥기금운용계획변경안">
+										 
+										
+										2017년도 중소기업창업 및 진흥기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007221</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_T1H7G0M6G0N7I0G9D5B6W3O9R9G0H5', 'billSimpleSearch')" title="2017년도 관광진흥개발기금운용계획변경안">
+										 
+										
+										2017년도 관광진흥개발기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007220</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Q1Y7R0E6R0E7Y0M9X5E5F2K5K7K9B2', 'billSimpleSearch')" title="2017년도 공공자금관리기금운용계획변경안">
+										 
+										
+										2017년도 공공자금관리기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007219</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Q1H7M0V6P0R7D0Q9V5Y4K4Z7Q2K5D5', 'billSimpleSearch')" title="2017년도 신용보증기금운용계획변경안">
+										 
+										
+										2017년도 신용보증기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>원안가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007218</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_G1X7L0J6W0L7N0D9Q5X3M5W2P7D2X4', 'billSimpleSearch')" title="2017년도 기술보증기금운용계획변경안">
+										 
+										
+										2017년도 기술보증기금운용계획변경안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>원안가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007217</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_H1I7U0O6Y0P7C0I9Z5R0V1Y9V3J4C4', 'billSimpleSearch')" title="2017년도 제1회 추가경정예산안">
+										 
+										
+										2017년도 제1회 추가경정예산안
+										</a>
+											</div>
+										
+									</td>
+									<td>정부</td>
+									<td>2017-06-07</td>
+										
+											
+											
+													<td>2017-07-22</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											정부이송
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007216</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_X1C7H0C6U0K5H1A8K1E6Y0Y2V2W0R7', 'billSimpleSearch')" title="국회법 일부개정법률안(김승희의원 등 12인)">
+										 
+										
+										국회법 일부개정법률안(김승희의원 등 12인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2020-01-09</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_X1C7H0C6U0K5H1A8K1E6Y0Y2V2W0R7');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007215</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_N1R7F0R6T0Y5P1R8Z1I3N2W9R7S0W9', 'billSimpleSearch')" title="농어업인의 안전보험 및 안전재해예방에 관한 법률 일부개정법률안(김철민의원 등 14인)">
+										 
+										
+										농어업인의 안전보험 및 안전재해예방에 관한 법률 일부개정법률안(김철민의원 등 14인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-09-28</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_N1R7F0R6T0Y5P1R8Z1I3N2W9R7S0W9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007214</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_D1S7Q0L6N0A5V1K8G0S3L1H4G3L1Z4', 'billSimpleSearch')" title="단양군 곡계굴 사건 및 한국전쟁 전후 민간인 희생사건 진상규명과 추모에 관한 법률안(권석창의원 등 10인)">
+										 
+										
+										단양군 곡계굴 사건 및 한국전쟁 전후 민간인 희생사건 진상규명과 추모에 관한 법률안(권석창의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_D1S7Q0L6N0A5V1K8G0S3L1H4G3L1Z4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007213</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_S1G7T0H6P0L5J1V7Y4K9L1K1Y9T9Y4', 'billSimpleSearch')" title="아동복지법 일부개정법률안(김승희의원 등 10인)">
+										 
+										
+										아동복지법 일부개정법률안(김승희의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2018-02-28</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_S1G7T0H6P0L5J1V7Y4K9L1K1Y9T9Y4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007212</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_R1F7H0C6G0Q5X1G7H3K6T4F6E3P1Q3', 'billSimpleSearch')" title="형법 일부개정법률안(조경태의원 등 10인)">
+										 
+										
+										형법 일부개정법률안(조경태의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-11-24</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_R1F7H0C6G0Q5X1G7H3K6T4F6E3P1Q3');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007211</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_I1A7C0O6F0L5Q1P7N2Z7L5T3Z0K8O9', 'billSimpleSearch')" title="남녀고용평등과 일·가정 양립 지원에 관한 법률 일부개정법률안(소병훈의원 등 14인)">
+										 
+										
+										남녀고용평등과 일·가정 양립 지원에 관한 법률 일부개정법률안(소병훈의원 등 14인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2019-08-02</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_I1A7C0O6F0L5Q1P7N2Z7L5T3Z0K8O9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007210</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_D1E7G0O6X0X5N1X7K2N4T1Z5N4X9R2', 'billSimpleSearch')" title="소득세법 일부개정법률안(김정우의원 등 11인)">
+										 
+										
+										소득세법 일부개정법률안(김정우의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2018-02-09</td>
+													<td>수정안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_D1E7G0O6X0X5N1X7K2N4T1Z5N4X9R2');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											본회의불부의
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007209</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_U1G7S0C6B0F5N1C7S2B2V5V0H8H2B4', 'billSimpleSearch')" title="정부조직법 일부개정법률안(홍의락의원 등 10인)">
+										 
+										
+										정부조직법 일부개정법률안(홍의락의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-07-20</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_U1G7S0C6B0F5N1C7S2B2V5V0H8H2B4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007208</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_R1M7Y0H6C0Q5A1M7H1M5N2X6W6M5P2', 'billSimpleSearch')" title="문화예술진흥법 일부개정법률안(김철민의원 등 13인)">
+										 
+										
+										문화예술진흥법 일부개정법률안(김철민의원 등 13인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_R1M7Y0H6C0Q5A1M7H1M5N2X6W6M5P2');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007207</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_L1L7Y0F6E0E5P1R6U5U6R0Y6Y5G3R5', 'billSimpleSearch')" title="어촌·어항법 일부개정법률안(황주홍의원 등 10인)">
+										 
+										
+										어촌·어항법 일부개정법률안(황주홍의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-11-09</td>
+													<td>원안가결</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_L1L7Y0F6E0E5P1R6U5U6R0Y6Y5G3R5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											공포
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007206</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Q1M7M0A6C0K5T1J6L5P0R1I6H8I2R5', 'billSimpleSearch')" title="한국주택금융공사법 일부개정법률안(강효상의원 등 10인)">
+										 
+										
+										한국주택금융공사법 일부개정법률안(강효상의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_Q1M7M0A6C0K5T1J6L5P0R1I6H8I2R5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007205</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_E1P7D0R6O0F5C1Q6N4K9K3R8G4A8D0', 'billSimpleSearch')" title="정부조직법 일부개정법률안(권은희의원 등 10인)">
+										 
+										
+										정부조직법 일부개정법률안(권은희의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-07-20</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_E1P7D0R6O0F5C1Q6N4K9K3R8G4A8D0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007204</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_E1K7H0C6S0B5V1Q6A4Z4P3J1Y1H3J6', 'billSimpleSearch')" title="도로교통법 일부개정법률안(최연혜의원 등 11인)">
+										 
+										
+										도로교통법 일부개정법률안(최연혜의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_E1K7H0C6S0B5V1Q6A4Z4P3J1Y1H3J6');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007203</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_G1L7V0Q6K0G5L1W6L4A3P0A7S3Z9T5', 'billSimpleSearch')" title="농어업재해대책법 일부개정법률안(박순자의원 등 10인)">
+										 
+										
+										농어업재해대책법 일부개정법률안(박순자의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_G1L7V0Q6K0G5L1W6L4A3P0A7S3Z9T5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007202</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_O1L7T0Q6Z0N5V1E6W3K7P0K1T3F6G0', 'billSimpleSearch')" title="농업협동조합법 일부개정법률안(황주홍의원 등 10인)">
+										 
+										
+										농업협동조합법 일부개정법률안(황주홍의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_O1L7T0Q6Z0N5V1E6W3K7P0K1T3F6G0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007201</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_V1N7G0F6E0U5S1X6D3C5V2L9O5P4D6', 'billSimpleSearch')" title="유전자변형생물체의 국가간 이동 등에 관한 법률 일부개정법률안(이훈의원 등 11인)">
+										 
+										
+										유전자변형생물체의 국가간 이동 등에 관한 법률 일부개정법률안(이훈의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2017-11-24</td>
+													<td>원안가결</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_V1N7G0F6E0U5S1X6D3C5V2L9O5P4D6');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											공포
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007200</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_X1E7U0E6O0H5O1T6E3T2Q4E1U4I5S2', 'billSimpleSearch')" title="국어기본법 일부개정법률안(황주홍의원 등 10인)">
+										 
+										
+										국어기본법 일부개정법률안(황주홍의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_X1E7U0E6O0H5O1T6E3T2Q4E1U4I5S2');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007199</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_M1T7R0M6C0C5T1Y6D3E1G1E1P1W5A9', 'billSimpleSearch')" title="개인정보 보호법 일부개정법률안(황주홍의원 등 10인)">
+										 
+										
+										개인정보 보호법 일부개정법률안(황주홍의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_M1T7R0M6C0C5T1Y6D3E1G1E1P1W5A9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007198</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Q1X7K0L6D0X5W1R0G2I8X0Z8A6U3E0', 'billSimpleSearch')" title="노인복지법 일부개정법률안(김상훈의원 등 10인)">
+										 
+										
+										노인복지법 일부개정법률안(김상훈의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td>2018-11-23</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_Q1X7K0L6D0X5W1R0G2I8X0Z8A6U3E0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007197</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_V1N7K0Q6F0O5D1C0D1R6X4S3D9C8L5', 'billSimpleSearch')" title="소득세법 일부개정법률안(박명재의원 등 13인)">
+										 
+										
+										소득세법 일부개정법률안(박명재의원 등 13인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-05</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_V1N7K0Q6F0O5D1C0D1R6X4S3D9C8L5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>ZZ20047</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_G1R7Z0W6J0A2N1D6O2U4H5T3I9M3U2', 'billSimpleSearch')" title="국무위원후보자(해양수산부장관 김영춘) 인사청문요청안">
+										 
+										
+										국무위원후보자(해양수산부장관 김영춘) 인사청문요청안
+										</a>
+											</div>
+										
+									</td>
+									<td>기타</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위심사보고
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>ZZ20046</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_S1B7Q0C6V0R2U1L6K2R7O4K9C8X3P6', 'billSimpleSearch')" title="국무위원후보자(국토교통부장관 김현미) 인사청문요청안">
+										 
+										
+										국무위원후보자(국토교통부장관 김현미) 인사청문요청안
+										</a>
+											</div>
+										
+									</td>
+									<td>기타</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위심사보고
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>ZZ20045</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_G1F7X0A6E0R2Y1L6T2G6V4Z1M5K8J2', 'billSimpleSearch')" title="국무위원후보자(문화체육관광부장관 도종환) 인사청문요청안">
+										 
+										
+										국무위원후보자(문화체육관광부장관 도종환) 인사청문요청안
+										</a>
+											</div>
+										
+									</td>
+									<td>기타</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위심사보고
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+									
+										
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>ZZ20044</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_S1E7S0Y6K0S2B1E6W2I5O5N6Z7K7O7', 'billSimpleSearch')" title="국무위원후보자(행정자치부장관 김부겸) 인사청문요청안">
+										 
+										
+										국무위원후보자(행정자치부장관 김부겸) 인사청문요청안
+										</a>
+											</div>
+										
+									</td>
+									<td>기타</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위심사보고
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007196</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_J1C7Q0J6H0Q2W1K7J5O8S1S2Q6Y3F4', 'billSimpleSearch')" title="성폭력방지 및 피해자보호 등에 관한 법률 일부개정법률안(강창일의원 등 10인)">
+										 
+										
+										성폭력방지 및 피해자보호 등에 관한 법률 일부개정법률안(강창일의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_J1C7Q0J6H0Q2W1K7J5O8S1S2Q6Y3F4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007195</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_D1W7O0P6K0M2E1M6T5B5F3B4Q6Q5H0', 'billSimpleSearch')" title="저출산·고령사회기본법 일부개정법률안(김철민의원 등 13인)">
+										 
+										
+										저출산·고령사회기본법 일부개정법률안(김철민의원 등 13인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_D1W7O0P6K0M2E1M6T5B5F3B4Q6Q5H0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007194</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Y1O7G0G6U0G2Q1W6S5N0O2V3H1X1Q2', 'billSimpleSearch')" title="지방교부세법 일부개정법률안(백재현의원 등 13인)">
+										 
+										
+										지방교부세법 일부개정법률안(백재현의원 등 13인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_Y1O7G0G6U0G2Q1W6S5N0O2V3H1X1Q2');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007193</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_J1Z7O0T6Q0M2X1M6B1K9J3B8J1Z5O6', 'billSimpleSearch')" title="정부조직법 일부개정법률안(김도읍의원 등 10인)">
+										 
+										
+										정부조직법 일부개정법률안(김도읍의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2017-07-20</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_J1Z7O0T6Q0M2X1M6B1K9J3B8J1Z5O6');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007192</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_N1F7U0G6S0L2J1X6X1U6N2U8H6R4E9', 'billSimpleSearch')" title="자살예방 및 생명존중문화 조성을 위한 법률 일부개정법률안(백재현의원 등 10인)">
+										 
+										
+										자살예방 및 생명존중문화 조성을 위한 법률 일부개정법률안(백재현의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2018-11-23</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_N1F7U0G6S0L2J1X6X1U6N2U8H6R4E9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007191</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_M1L7Q0N6U0J2D1L5V3O1K0W9R2O2Q7', 'billSimpleSearch')" title="군인연금법 일부개정법률안(송희경의원 등 16인)">
+										 
+										
+										군인연금법 일부개정법률안(송희경의원 등 16인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2019-11-19</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_M1L7Q0N6U0J2D1L5V3O1K0W9R2O2Q7');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007190</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_A1O7K0G6S0Q2V1O5A2X0D4D9S5L6O4', 'billSimpleSearch')" title="가맹사업거래의 공정화에 관한 법률 일부개정법률안(조경태의원 등 10인)">
+										 
+										
+										가맹사업거래의 공정화에 관한 법률 일부개정법률안(조경태의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_A1O7K0G6S0Q2V1O5A2X0D4D9S5L6O4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007189</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_L1E7C0T6H0O2F1A5P0C9V5O5C4R9L5', 'billSimpleSearch')" title="생명윤리 및 안전에 관한 법률 일부개정법률안(김명연의원 등 10인)">
+										 
+										
+										생명윤리 및 안전에 관한 법률 일부개정법률안(김명연의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2019-04-05</td>
+													<td>수정가결</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_L1E7C0T6H0O2F1A5P0C9V5O5C4R9L5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											공포
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007188</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_V1I7H0O6V0U2A1B5F0U7M4P0J2I9E5', 'billSimpleSearch')" title="정부조직법 일부개정법률안(신창현의원 등 11인)">
+										 
+										
+										정부조직법 일부개정법률안(신창현의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2018-05-28</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_V1I7H0O6V0U2A1B5F0U7M4P0J2I9E5');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007187</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_I1I7U0O6H0F2C1R5K0P6R0S6B2W2U9', 'billSimpleSearch')" title="정부조직법 일부개정법률안(이명수의원 등 10인)">
+										 
+										
+										정부조직법 일부개정법률안(이명수의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2017-07-20</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_I1I7U0O6H0F2C1R5K0P6R0S6B2W2U9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007186</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_N1N7M0U6J0K2F1N4G3F0C5L7T8D0R9', 'billSimpleSearch')" title="국민건강보험법 일부개정법률안(박준영의원 등 16인)">
+										 
+										
+										국민건강보험법 일부개정법률안(박준영의원 등 16인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_N1N7M0U6J0K2F1N4G3F0C5L7T8D0R9');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007185</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_Y1K7T0S6I0P2C1F4X2F0Y0Z8B5L4I4', 'billSimpleSearch')" title="공직선거법 일부개정법률안(유승희의원 등 31인)">
+										 
+										
+										공직선거법 일부개정법률안(유승희의원 등 31인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_Y1K7T0S6I0P2C1F4X2F0Y0Z8B5L4I4');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007184</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_T1L7A0Y6I0G2H1D4N1Q1J1D8B5M9P0', 'billSimpleSearch')" title="공직선거법 일부개정법률안(주승용의원 등 10인)">
+										 
+										
+										공직선거법 일부개정법률안(주승용의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_T1L7A0Y6I0G2H1D4N1Q1J1D8B5M9P0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007183</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_C1E7J0X6J0E2Y1V4J0O8I5V7Y3N5I2', 'billSimpleSearch')" title="주차장법 일부개정법률안(민홍철의원 등 10인)">
+										 
+										
+										주차장법 일부개정법률안(민홍철의원 등 10인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2017-09-28</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_C1E7J0X6J0E2Y1V4J0O8I5V7Y3N5I2');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007182</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_F1Y7I0D6J0P2Q1X3Q4B4X5G9L0C8O0', 'billSimpleSearch')" title="4·16세월호참사 피해구제 및 지원 등을 위한 특별법 일부개정법률안(주승용의원 등 13인)">
+										 
+										
+										4·16세월호참사 피해구제 및 지원 등을 위한 특별법 일부개정법률안(주승용의원 등 13인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2018-02-20</td>
+													<td>대안반영폐기</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_F1Y7I0D6J0P2Q1X3Q4B4X5G9L0C8O0');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											대안반영폐기
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007181</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_P1M7U0A6Z0G2D1G1T3E5Y2G1H3P9P8', 'billSimpleSearch')" title="노인복지법 일부개정법률안(유승희의원 등 32인)">
+										 
+										
+										노인복지법 일부개정법률안(유승희의원 등 32인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_P1M7U0A6Z0G2D1G1T3E5Y2G1H3P9P8');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+									
+									
+										
+									
+									
+								
+								<tr>
+									<td>2007180</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_cheo.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_P1R7A0D6O0F2S1P1M2G2F4M1X1X0S8', 'billSimpleSearch')" title="교육공무원법 일부개정법률안(주승용의원 등 11인)">
+										 
+										
+										교육공무원법 일부개정법률안(주승용의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td>2017-06-08</td>
+													<td>철회</td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_P1R7A0D6O0F2S1P1M2G2F4M1X1X0S8');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											철회
+																				
+									</td>
+								</tr>
+							
+								
+								
+									
+										
+									
+									
+								
+								
+								
+									
+										
+									
+									
+									
+									
+								
+								<tr>
+									<td>2007179</td>
+									<td class="alignL">
+											<div class="floatL h100P"><img src="/bill/images/icon/icon_gye.gif" alt="계">&nbsp;</div>
+											<div class="pl25">
+											<a href="javascript:fGoDetail('PRC_M1F7F0E6X0T2T1H1L2K1B2Z5O0T8B8', 'billSimpleSearch')" title="해양환경 보전 및 활용에 관한 법률 일부개정법률안(주승용의원 등 11인)">
+										 
+										
+										해양환경 보전 및 활용에 관한 법률 일부개정법률안(주승용의원 등 11인)
+										</a>
+											</div>
+										
+									</td>
+									<td>의원</td>
+									<td>2017-06-02</td>
+										
+											
+											
+													<td></td>
+													<td></td>
+											
+										
+									
+									<td>
+										<a href="javascript:ajaxShowListSummaryLayerPopup('PRC_M1F7F0E6X0T2T1H1L2K1B2Z5O0T8B8');"><img src="/bill/images/icon/icon_vcon.gif" alt="주요내용보기"></a>
+										<!-- layerpop -->
+										<div id="summaryLayer" class="layerpop layer590x500" style="display:none;">
+											<!-- 주요내용 -->
+										</div>
+										<!-- //layerpop -->
+									</td>
+									<td>
+										
+											소관위접수
+																				
+									</td>
+								</tr>
+							
+							
+							
+							</tbody>
+						</table>
+						<div class="paging" id="pageListViewArea"><a href="javascript:GoPage(1);" class="btnPage" alt="맨앞으로"><img src="/bill/images/icon/btnprev_p2.png" alt="맨앞으로"></a><a href="javascript:GoPage(331);" class="btnPage" alt="이전10개"><img src="/bill/images/icon/btnprev_p.png" alt="이전10개"></a><a href="javascript:GoPage(341)">341</a><a href="javascript:GoPage(342)">342</a><a href="javascript:GoPage(343)">343</a><a href="javascript:GoPage(344)">344</a><a href="javascript:GoPage(345)">345</a><a href="javascript:GoPage(346)">346</a><a href="javascript:GoPage(347)">347</a><a href="javascript:GoPage(348)">348</a><a href="javascript:GoPage(349)">349</a><a href="javascript:GoPage(350)" class="on">350</a><a href="javascript:GoPage(351);" class="btnPage" alt="다음10개"><img src="/bill/images/icon/btnnext_p.png" alt="다음10개"></a><a href="javascript:GoPage(495)" class="btnPage" alt="맨뒤로"><img src="/bill/images/icon/btnnext_p2.png" alt="맨뒤로"></a></div>
+					</div>
+				</div>
+			</div>
+
+
+
+	
+		</div>
+		<!-- //컨텐츠 -->	
+		
+
+
+		<div class="footerWrap">
+			<div class="footerLink">
+				<div class="inner">
+					<a href="/bill/info/HelpDesk.do?tabMenuType=helpdesk_1">도움말</a> |
+					<a href="/bill/info/Persnalinfo.do?tabMenuType=persnalinfo">개인정보처리방침</a> |
+					<a href="#" class="allMenu">사이트맵</a>
+
+					<div class="familySite">
+						<select title="관련사이트바로가기" name="menu2" onchange="if(this.options[this.selectedIndex].value != '') window.open(this.options[this.selectedIndex].value,'_blank')">
+							<option value="" selected="">관련사이트 바로가기</option>
+							<option value="http://www.assembly.go.kr">대한민국국회</option>       
+							<option value="http://committee.na.go.kr">국회상임위원회 및 특별위원회</option>
+							<option value="http://naph.assembly.go.kr">맞춤입법콘텐츠검색시스템</option>
+							<option value="http://likms.assembly.go.kr/law">국회법률정보시스템</option>
+							<option value="http://likms.assembly.go.kr/bill/nafs/nafsList.do">예결산정보시스템</option>
+							<option value="http://likms.assembly.go.kr/inspections/main.do">국정감사정보시스템</option>
+							<option value="http://likms.assembly.go.kr/record/">회의록시스템</option>
+							<option value="http://assembly.webcast.go.kr">인터넷의사중계시스템</option>
+							<option value="http://w3.assembly.go.kr/vod/index.jsp">영상회의록시스템</option>
+							<option value="http://w3.assembly.go.kr/multimedia">미디어자료관</option>
+							<option value="http://pal.assembly.go.kr">국회입법예고시스템</option>
+						</select>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footerInfo inner">
+				<p>
+					주소 : 서울시 영등포구 의사당대로 1(여의도동) 07233  &nbsp;&nbsp;&nbsp;전화 : 02)788-2030<br>
+					대한민국국회 의안정보시스템의 모든 정보에 대한 권한은 국회에 있습니다.  Copyright © National Assembly. All rights reserved.
+				</p>
+				<div class="footLogo"><img src="/bill/images/common/foot_logo.png" alt="의안정보시스템"></div><div style="float:right;position:relative;bottom:0;left:0;"><div class="topBtn" onclick="$(window).scrollTop(0);"><img src="/bill/images/icon/top.gif"></div></div>
+			</div>
+		</div>
+
+
+	<!-- 공통팝업 -->
+	<div id="commPopDiv" class="layerpop layer590x500" style="display:none;">
+	</div>
+	
+	
+	<!-- layerpop 역대국회기간 -->
+	<div id="periodDiv" class="layerpop layer590x500" style="display:none;">
+		<p class="layti">역대국회기간</p>
+		<a href="javascript:hideLayerPopup();" class="btnClose"><img src="/bill/images/icon/icon_close.png" alt="창닫기"></a>
+	
+		<div class="tableCol02 layerInScroll">
+			<table>
+				<caption class="hidden">등록의견 리스트</caption>
+				<colgroup>
+					<col style="width:150px"><col style="width:150px"><col style="width:auto">
+				</colgroup>
+				
+				<thead>
+					<tr>
+						<th scope="col">대별</th>
+						<th scope="col">회기</th>
+						<th scope="col">기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>제헌국회</td>
+						<td>1 ~ 6</td>
+						<td>1948.5.31 ~ 1950.5.30</td>
+					</tr>
+					<tr>
+						<td>2 대 국 회</td>
+						<td>7 ~ 18</td>
+						<td>1950.5.31 ~ 1954.5.30</td>
+					</tr>
+					<tr>
+						<td>3 대 국 회</td>
+						<td>19 ~ 28</td>
+						<td>1954.5.31 ~ 1958.5.30</td>
+					</tr>
+					<tr>
+						<td>4 대 국 회</td>
+						<td>29 ~ 35</td>
+						<td>1958.5.31 ~ 1960.7.28</td>
+					</tr>
+					<tr>
+						<td>5 대 국 회</td>
+						<td>36 ~ 38</td>
+						<td>1960.7.29 ~ 1961.5.16</td>
+					</tr>
+					<tr>
+						<td>국가재건최고회의</td>
+						<td>-</td>
+						<td>1961.5.19 ~ 1963.12.16</td>
+					</tr>
+					<tr>
+						<td>6 대 국 회</td>
+						<td>39 ~ 60</td>
+						<td>1963.12.17 ~ 1967.6.30</td>
+					</tr>
+					<tr>
+						<td>7 대 국 회</td>
+						<td>61 ~ 76</td>
+						<td>1967.7.1 ~ 1971.6.30</td>
+					</tr>
+					<tr>
+						<td>8 대 국 회</td>
+						<td>77 ~ 84</td>
+						<td>1971.7.1 ~ 1972.10.17</td>
+					</tr>
+					<tr>
+						<td>9 대 국 회</td>
+						<td>85 ~ 100</td>
+						<td>1973.3.12 ~ 1979.3.11</td>
+					</tr>
+					<tr>
+						<td>10 대 국 회</td>
+						<td>101 ~ 105</td>
+						<td>1979.3.12 ~ 1980.10.27</td>
+					</tr>
+					<tr>
+						<td>국가보위입법회의</td>
+						<td>-</td>
+						<td>1980.10.28 ~ 1981.4.10</td>
+					</tr>
+					<tr>
+						<td>11 대 국 회</td>
+						<td>106 ~ 124</td>
+						<td>1981.4.11 ~ 1985.4.10</td>
+					</tr>
+					<tr>
+						<td>12 대 국 회</td>
+						<td>125 ~ 140</td>
+						<td>1985.4.11 ~ 1988.5.29</td>
+					</tr>
+					<tr>
+						<td>13 대 국 회</td>
+						<td>141 ~ 156</td>
+						<td>1988.5.30 ~ 1992.5.29</td>
+					</tr>
+					<tr>
+						<td>14 대 국 회</td>
+						<td>157 ~ 178</td>
+						<td>1992.5.30 ~ 1996.5.29</td>
+					</tr>
+					<tr>
+						<td>15 대 국 회</td>
+						<td>179 ~ 211</td>
+						<td>1996.5.30 ~ 2000.5.29</td>
+					</tr>
+					<tr>
+						<td>16 대 국 회</td>
+						<td>212 ~ 246</td>
+						<td>2000.5.30 ~ 2004.5.29</td>
+					</tr>
+					<tr>
+						<td>17 대 국 회</td>
+						<td>247 ~ 274</td>
+						<td>2004.5.30 ~ 2008.5.29</td>
+					</tr>
+					<tr>
+						<td>18 대 국 회</td>
+						<td>275 ~ 307</td>
+						<td>2008.5.30 ~ 2012.5.29</td>
+					</tr>
+					<tr>
+						<td>19 대 국 회</td>
+						<td>308 ~</td>
+						<td>2012.5.30 ~ 2016.5.29</td>
+					</tr>
+				</tbody>
+			</table>
+	
+			<p class="textType02 mt20">
+				제1공화국 : 제정헌법ㆍ제1차ㆍ제2차개헌<br>
+				제2공화국 : 제3차ㆍ제4차개헌<br>
+				제3공화국 : 제5차ㆍ제6차개헌<br>
+				제4공화국 : 제7차개헌<br>
+				제5공화국 : 제8차개헌
+			</p>
+		</div>
+	</div>
+	<!-- //layerpop -->
+	
+	
+	<form id="hiddenGoDetailForm" name="hiddenGoDetailForm" method="post" action="/bill/billDetail.do">
+		<input type="hidden" name="srchBillResultCd" value="">
+		<input type="hidden" name="billId" value="">
+		<input type="hidden" name="sessionCd" value="">
+		<input type="hidden" name="currentsCd" value="">
+		<input type="hidden" name="currentsDt" value="">
+		<input type="hidden" name="billNo" value="">
+		<input type="hidden" name="billName" value="">
+		<input type="hidden" name="simsaBonmun" value="">
+		<input type="hidden" name="ageFrom" value="20">
+		<input type="hidden" name="ageTo" value="20">
+		<input type="hidden" name="age" value="">
+		<input type="hidden" name="dateFrom" value="">
+		<input type="hidden" name="dateTo" value="">
+		<input type="hidden" name="procFrom" value="">
+		<input type="hidden" name="procTo" value="">
+		<input type="hidden" name="dispFrom" value="">
+		<input type="hidden" name="dispTo" value="">
+		<input type="hidden" name="proposeFrom" value="">
+		<input type="hidden" name="proposeTo" value="">
+		<input type="hidden" name="submitFrom" value="">
+		<input type="hidden" name="submitTo" value="">
+		<input type="hidden" name="billNoFrom" value="">
+		<input type="hidden" name="billNoTo" value="">
+		<input type="hidden" name="billKind" value="전체">
+		<input type="hidden" name="billKind2" value="">
+		<input type="hidden" name="billKindExclude" value="">
+		<input type="hidden" name="chargeCommittee" value="">
+		<input type="hidden" name="chargeCommitteeName" value="">
+		<input type="hidden" name="proposerKind" value="전체">
+		<input type="hidden" name="proposer" value="">
+		<input type="hidden" name="hjNm" value="">
+		<input type="hidden" name="statsType" value="">
+		<input type="hidden" name="proposeGubn" value="전체">
+		<input type="hidden" name="generalResult" value="">
+		<input type="hidden" name="generalResultType" value="">			
+		<input type="hidden" name="committeeResult" value="">
+		<input type="hidden" name="periodFrom" value="">
+		<input type="hidden" name="periodTo" value="">
+		<input type="hidden" name="budgetYn" value="">
+		<input type="hidden" name="billGbnAmendment" value="">			
+		<input type="hidden" name="orderColumn" value="Propose_Dt">
+		<input type="hidden" name="orderType" value="DESC">
+		<input type="hidden" name="lastQuery" value="">
+		<input type="hidden" name="strPage" value="350">
+		<input type="hidden" name="pageSize" value="50">
+		<input type="hidden" name="maxPage" value="10">
+		<input type="hidden" name="billparam" value="">
+		<input type="hidden" name="allCount" value="24721">
+		<input type="hidden" name="resultCount" value="50">
+		<input type="hidden" name="mooring" value="N">
+		<input type="hidden" name="statsKind" value="">
+		<input type="hidden" name="ageCheck" value="">
+		<input type="hidden" name="tabMenuType" value="billSimpleSearch">
+	</form>
+	
+	<form id="hiddenGoDetailForm2" name="hiddenGoDetailForm2" method="post" action="/bill/billDetail2.do">
+		<input type="hidden" name="billId" value="">
+		<input type="hidden" name="ageFrom" value="20">
+		<input type="hidden" name="ageTo" value="20">
+		<input type="hidden" name="sessionCd" value="">
+		<input type="hidden" name="currentsCd" value="">
+		<input type="hidden" name="tabMenuType" value="billSimpleSearch">
+	</form>
+	
+	
+	<form id="hiddenForm" name="hiddenForm" method="post" target="_blank" action="/bill">
+		
+	</form>
+	<div style="overflow:hidden; width:0px; height:0px;">
+		<iframe name="hiddenIframe" id="hiddenIframe" width="0" height="0" title="파일다운로드 프레임"></iframe>
+	</div>
+	</div>
+
+</body></html>
