@@ -9,6 +9,8 @@ bills/html/
 bills/data/
 bills/na-bills-*.csv
 bills/new_bills
+bills/resources
 
 # didn't prepare.
+
 bills/specific
