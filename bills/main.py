@@ -12,7 +12,7 @@ from selenium import webdriver
 from settings import BASEURL, DIR, HTML_FIELDS, PAGE_SIZE
 from utils import check_dir, get_webpage_text, get_webpage
 from meta import get_list_html, get_npages, html2csv
-from specific import html2json
+from specific import html2json, get_specific_html
 
 
 assembly_s, assembly_e = 20, 20 # start, end id of assembly
@@ -20,8 +20,8 @@ bill_s, bill_e = None, None     # start, end number of bill
 
 assembly_e = 20
 
-## for PhantomJS
-# driver = webdriver.PhantomJS('/Users/beomi/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
+# # for PhantomJS
+# # driver = webdriver.PhantomJS('/Users/beomi/Downloads/phantomjs-2.1.1-macosx/bin/phantomjs')
 # url = "http://likms.assembly.go.kr/bill/BillSearchSimple.do"
 
 # options = webdriver.ChromeOptions()
@@ -46,8 +46,11 @@ assembly_e = 20
 
 a = 20
 npages = 495
+assembly_id = 20
 # npages = get_npages(driver)
 # meta.get_list_html(driver, a, npages)
 # meta.html2csv(a, npages)
 
-html2json(a, range=(bill_s, bill_e))
+
+# get_specific_html(assembly_id=a)
+# html2json(a, range=(bill_s, bill_e))

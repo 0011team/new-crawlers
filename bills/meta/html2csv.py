@@ -35,7 +35,8 @@ def html2csv(assembly_id, npages):
         return data
     
     def parse_page(page, f, assembly_id):
-        pn_html = open("1.html", 'r')
+        fn = "{}/{}/{}.html".format(DIR['list'], assembly_id, page)
+        pn_html = open(fn, 'r')
         bs = BeautifulSoup(pn_html, 'lxml')
         bills_table = bs.find('div', class_="tableCol01")
         bills = bills_table.find_all('tr')
@@ -51,6 +52,7 @@ def html2csv(assembly_id, npages):
     directory = DIR['meta']
     check_dir(directory)
     meta_data = '%s/%d.csv' % (directory, assembly_id)
+    
 
     # meta_data = './%s/%d.csv' % (directory, assembly_id)
 

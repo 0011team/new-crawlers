@@ -1,6 +1,8 @@
 import requests
 import os 
 import html5lib
+import json
+from bs4 import BeautifulSoup
 
 # ===== for utils 
 HEADERS = {
@@ -40,5 +42,14 @@ def read_webpage(filename):
         p = page.parse(f)
     return p
 
+def read_webpage_by_bs4(html):
+    pn_html = open(html, 'r')
+    bs = BeautifulSoup(pn_html, 'lxml')
+    return bs
+
 def get_elems(page, x):
     return page.xpath(x)
+
+def write_json(data, fn):
+    with open(fn, 'w', encoding='UTF-8') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
